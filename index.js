@@ -140,7 +140,7 @@ async function welcome() {
 
     console.log(`
         ${chalk.bgBlue(" How To Play? ")}
-        You will get 10 questions.
+        You will get 5 questions.
         If you get any question wrong, You ${chalk.bgRed(" Lose ")} 
         If you answer all questions correctly, You ${chalk.bgGreen(" Win ")}
     `);
@@ -182,7 +182,7 @@ async function checkAnswer(selectedOption, correctOption) {
 let shuffledQuestions = questions.sort(() => Math.random() - 0.5);
 
 async function askQuestions() {
-    for(let i=0; i<10; i++) {
+    for(let i=0; i<5; i++) {
         let answer = await inquirer.prompt({
             type: 'list',
             name: 'selectedOption',
